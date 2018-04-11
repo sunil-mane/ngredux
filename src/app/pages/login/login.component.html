@@ -1,0 +1,22 @@
+{{this.loginForm.value | json}}
+<form (ngSubmit)="login($event)" [formGroup]="loginForm">
+  <div class="form-group" [ngClass]="{'has-danger':email.invalid, 'has-success': email.valid}">
+    <label>Email</label>
+    <input type="text" name="email" formControlName="email" required class="form-control">
+    <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+      <p *ngIf="email.errors.email">Valid Email is required</p>
+    </div>
+  </div>
+  <div class="form-group" [ngClass]="{'has-danger':password.invalid, 'has-success': password.valid}">
+    <label>Password</label>
+    <input type="password" formControlName="password" required class="form-control">
+    <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
+      <p *ngIf="password.errors.required">Password is required</p>
+      <p *ngIf="password.errors.minlength">Password must be 8 characters long</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary">Login</button>
+  </div>
+
+</form>
