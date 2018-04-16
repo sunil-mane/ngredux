@@ -14,11 +14,13 @@ export class HomeComponent implements OnInit {
   constructor(
     private store: NgRedux<IAppState>,
     private userService: UserService
-  ) {
+  ) {}
+
+  ngOnInit() {
     this.userService
       .getUsers()
-      .subscribe(users => this.store.dispatch({ type: LIST_USERS, payload: users }));
+      .subscribe(users =>
+        this.store.dispatch({ type: LIST_USERS, payload: users })
+      );
   }
-
-  ngOnInit() {}
 }
