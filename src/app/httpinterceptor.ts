@@ -13,10 +13,16 @@ export class CustomHttpInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     console.log("intercepted request ... ");
 
+    let url: string;
+    if (req.url.startsWith("http")) {
+      url = req.url;
+    } else {
+      url = `https://dev.samsunggearup.com/api/v2${req.url}`;
+    }
     // Clone the request to add the new header.
     const authReq = req.clone({
       // headers: req.headers.set("headerName", "headerValue"),
-      url: `https://dev.samsunggearup.com/api/v2${req.url}`
+      url: url
     });
 
     console.log("Sending request with new header now ...");
