@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { AuthService } from "../../services/auth.service";
+import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"]
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
@@ -17,19 +17,19 @@ export class LoginComponent implements OnInit {
   }
 
   createForm() {
-    this.login = new FormControl("", [Validators.required, Validators.email]);
-    this.password = new FormControl("", [
+    this.login = new FormControl('', [Validators.required, Validators.email]);
+    this.password = new FormControl('', [
       Validators.required,
       Validators.minLength(8)
     ]);
     this.loginForm = new FormGroup({
       login: this.login,
       password: this.password,
-      grant_type: new FormControl("password")
+      grant_type: new FormControl('password')
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   signIn(e) {
     e.preventDefault();

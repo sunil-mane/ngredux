@@ -1,5 +1,5 @@
-import { LIST_USERS } from "./actions";
-import { INITIAL_STATE } from "./IAppState";
+import { LIST_USERS } from './actions';
+import { INITIAL_STATE } from './IAppState';
 
 export function rootReducer(state = INITIAL_STATE, action) {
   switch (action.type) {

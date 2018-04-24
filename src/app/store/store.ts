@@ -3,8 +3,8 @@ import {
   applyMiddleware,
   compose,
   GenericStoreEnhancer
-} from "redux";
-import { rootReducer } from "./reducers";
+} from 'redux';
+import { rootReducer } from './reducers';
 
 declare var window: any;
 const devToolsExtension: GenericStoreEnhancer = window.devToolsExtension

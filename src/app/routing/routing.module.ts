@@ -1,19 +1,19 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { Routes, RouterModule } from "@angular/router";
-import { ReactiveFormsModule } from "@angular/forms";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { AgmCoreModule } from "@agm/core";
+import { AgmCoreModule } from '@agm/core';
 
-import { HomeComponent } from "../pages/home/home.component";
-import { DashboardComponent } from "../pages/dashboard/dashboard.component";
-import { LoginComponent } from "../pages/login/login.component";
+import { HomeComponent } from '../pages/home/home.component';
+import { DashboardComponent } from '../pages/dashboard/dashboard.component';
+import { LoginComponent } from '../pages/login/login.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/login", pathMatch: "full" },
-  { path: "login", component: LoginComponent },
-  { path: "home", component: HomeComponent },
-  { path: "dashboard", component: DashboardComponent }
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'dashboard', component: DashboardComponent }
 ];
 
 @NgModule({
@@ -22,7 +22,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyC8vKlVflmVTGPLrVHSaV2zJSUXm8K7jBU"
+      apiKey: 'AIzaSyC8vKlVflmVTGPLrVHSaV2zJSUXm8K7jBU'
     })
   ],
   exports: [RouterModule],

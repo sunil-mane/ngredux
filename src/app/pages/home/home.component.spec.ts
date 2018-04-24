@@ -1,10 +1,10 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { HttpClientModule } from "@angular/common/http";
-import { NgReduxModule } from "@angular-redux/store";
-import { HomeComponent } from "./home.component";
-import { UserService } from "../../services/user.service";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { NgReduxModule } from '@angular-redux/store';
+import { HomeComponent } from './home.component';
+import { UserService } from '../../services/user.service';
 
-describe("HomeComponent", () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
@@ -22,7 +22,7 @@ describe("HomeComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

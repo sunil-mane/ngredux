@@ -1,14 +1,14 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { NgRedux, NgReduxModule } from "@angular-redux/store";
-import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
-import { RoutingModule } from "./routing/routing.module";
-import { AppComponent } from "./app.component";
-import { IAppState, store } from "./store";
-import { UserService } from "./services/user.service";
-import { CustomHttpInterceptor } from "./httpinterceptor";
-import { AuthService } from "./services/auth.service";
+import { RoutingModule } from './routing/routing.module';
+import { AppComponent } from './app.component';
+import { IAppState, store } from './store';
+import { UserService } from './services/user.service';
+import { CustomHttpInterceptor } from './httpinterceptor';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [AppComponent],
