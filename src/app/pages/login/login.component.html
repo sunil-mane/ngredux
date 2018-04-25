@@ -1,4 +1,3 @@
-{{this.loginForm.value | json}}
 <form (ngSubmit)="signIn($event)" [formGroup]="loginForm">
   <div class="form-group" [ngClass]="{'has-danger':login.invalid, 'has-success': login.valid}">
     <label>Email</label>
